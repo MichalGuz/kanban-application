@@ -17,6 +17,8 @@ public class KanbanApplication {
 		String  title = taskDto.getTitle();
 		String content = taskDto.getContent();
 
+		System.out.println(id + " " + title + " " + content);
+
 		SpringApplication.run(KanbanApplication.class, args);
 	}
 
