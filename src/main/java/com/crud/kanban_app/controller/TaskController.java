@@ -10,7 +10,13 @@ public class TaskController {
         return new ArrayList<>();
     }
 
-    public TaskDto getTask(long id){
-        return new TaskDto(1L, "Test title", "Test content");
+    public TaskDto getTask(long id) {
+        return new TaskDto(1L, "Test title", "Test content.");
+    }
+
+    public void deleteTask(long taskId) {}
+
+    public TaskDto updateTask(TaskDto taskDto) {
+        return new TaskDto(1L, "Updated task", "Test content after update.")
     }
 }
