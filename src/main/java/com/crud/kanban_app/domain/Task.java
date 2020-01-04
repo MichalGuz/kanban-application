@@ -1,6 +1,6 @@
-package com.crud.kanban_app;
+package com.crud.kanban_app.domain;
 
-public class TaskDto {
+public class Task {
     private Long id;
     private String title;
     private String content;
