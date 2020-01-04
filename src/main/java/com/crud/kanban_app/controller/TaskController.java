@@ -17,7 +17,7 @@ public class TaskController {
     public void deleteTask(long taskId) {}
 
     public TaskDto updateTask(TaskDto taskDto) {
-        return new TaskDto(1L, "Updated task", "Test content after update.")
+        return new TaskDto(1L, "Updated task", "Test content after update.");
     }
 
     public void createTask( TaskDto taskDto) {};
