@@ -1,6 +1,7 @@
 package com.crud.kanban_app.controller;
 
 import com.crud.kanban_app.domain.TaskDto;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,6 +26,7 @@ public class TaskController {
     @RequestMapping(method = RequestMethod.DELETE, value = "deleteTask")
     public void deleteTask(long taskId) {}
 
+    @RequestMapping(method = RequestMethod.PUT, value = "updateTask")
     public TaskDto updateTask(TaskDto taskDto) {
         return new TaskDto(1L, "Updated task", "Test content after update.");
     }
