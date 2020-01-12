@@ -1,4 +1,4 @@
-package com.crud.kanban_app;
+package com.crud.kanban_app.repository;
 
 import com.crud.kanban_app.domain.Task;
 import org.springframework.data.repository.CrudRepository;
