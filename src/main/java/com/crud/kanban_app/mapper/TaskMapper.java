@@ -3,7 +3,6 @@ package com.crud.kanban_app.mapper;
 import com.crud.kanban_app.domain.Task;
 import com.crud.kanban_app.domain.TaskDto;
 import org.springframework.stereotype.Component;
-import sun.text.resources.sk.JavaTimeSupplementary_sk;
 
 import java.util.List;
 import java.util.stream.Collectors;
