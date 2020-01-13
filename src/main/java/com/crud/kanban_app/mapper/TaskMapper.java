@@ -5,6 +5,7 @@ import com.crud.kanban_app.domain.TaskDto;
 import sun.text.resources.sk.JavaTimeSupplementary_sk;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 public class TaskMapper {
@@ -22,5 +23,9 @@ public class TaskMapper {
                 task.getContent());
     }
 
-    public List<TaskDto> mapToTaskDtoList(final List<Task> taskList) {}
+    public List<TaskDto> mapToTaskDtoList(final List<Task> taskList) {
+        return taskList.stream()
+                .map(r -> new TaskDto((r.getId(), r.getTitle(), r.getContent()))
+                .collect(Collectors.toList());
+    }
 }
