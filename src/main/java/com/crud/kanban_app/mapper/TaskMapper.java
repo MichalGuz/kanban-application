@@ -11,4 +11,11 @@ public class TaskMapper {
                 taskDto.getContent()
         );
     }
+
+    public TaskDto mapToTaskDto(final Task task) {
+        return new TaskDto(
+                task.getId(),
+                task.getTitle(),
+                task.getContent());
+    }
 }
