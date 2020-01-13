@@ -1,6 +1,8 @@
 package com.crud.kanban_app.controller;
 
 import com.crud.kanban_app.domain.TaskDto;
+import com.crud.kanban_app.service.DbService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,6 +12,8 @@ import java.util.*;
 @RestController
 @RequestMapping("/test1/task")
 public class TaskController {
+    @Autowired
+    private DbService service;
 
     @RequestMapping(method = RequestMethod.GET, value = "getTasks")
     public List<TaskDto> getTasks() {
