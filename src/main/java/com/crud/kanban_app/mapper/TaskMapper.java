@@ -2,12 +2,13 @@ package com.crud.kanban_app.mapper;
 
 import com.crud.kanban_app.domain.Task;
 import com.crud.kanban_app.domain.TaskDto;
+import org.springframework.stereotype.Component;
 import sun.text.resources.sk.JavaTimeSupplementary_sk;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-
+@Component
 public class TaskMapper {
     public Task mapToTask(final TaskDto taskDto) {
         return new Task(
