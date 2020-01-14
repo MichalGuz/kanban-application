@@ -38,5 +38,7 @@ public class TaskController {
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "createTask")
-    public void createTask( TaskDto taskDto) {};
+    public void createTask( TaskDto taskDto) {
+        service.saveTask(taskMapper.mapToTask(taskDto));
+    };
 }
