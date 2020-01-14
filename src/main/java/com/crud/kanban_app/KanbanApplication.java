@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
-//@EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class})
 @PropertySource("classpath:application.properties")
 
 public class KanbanApplication {
