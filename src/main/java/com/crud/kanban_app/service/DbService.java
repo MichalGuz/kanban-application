@@ -28,4 +28,8 @@ public class DbService {
     public Optional<Task> getTask(final Long id) {
         return taskRepository.findById(id);
     }
+
+    public void deleteTask(final Long id) {
+        taskRepository.deleteById(id);
+    }
 }
