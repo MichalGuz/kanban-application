@@ -2,7 +2,7 @@ plugins {
     id 'org.springframework.boot' version '2.1.11.RELEASE'
     id 'io.spring.dependency-management' version '1.0.8.RELEASE'
     id 'java'
-    id 'war'
+    //id 'war'
 }
 
 group = 'com.example'
@@ -24,9 +24,16 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok' 
-    // runtimeOnly 'mysql:mysql-connector-java'
-    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.18'
+    
+    // not required
+    //runtimeOnly 'mysql:mysql-connector-java'
+    // required for Tomcat(local and external) with jar or war
+    //compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.18'
+    // required for Heroku with jar only
+    runtimeOnly 'org.postgresql:postgresql'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+    
+    // required for external Tomcat with war only
+    //providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 }

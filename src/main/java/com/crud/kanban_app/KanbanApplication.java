@@ -8,16 +8,18 @@ import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
 @PropertySource("classpath:application.properties")
-
-public class KanbanApplication extends SpringBootServletInitializer {
+public class KanbanApplication {
+// required for external Tomcat only
+// public class KanbanApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		SpringApplication.run(KanbanApplication.class, args);
 	}
 
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(KanbanApplication.class);
-	}
+//	required for external Tomcat only
+//	@Override
+//	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+//		return application.sources(KanbanApplication.class);
+//	}
 
 }
